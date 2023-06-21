@@ -1,0 +1,147 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: rgb(250, 237, 220);
+  margin: 0;
+  padding: 0;
+  margin-bottom: 0;
+}
+
+/* Empieza barra de navegación*/
+nav {
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: large;
+  background-color: rgb(48, 48, 48);
+  color: white;
+  width: 100%;
+  position: fixed;
+  top: 0;
+}
+
+nav .Mobile {
+  display: none;
+}
+
+nav .Mobile .Header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 10px;
+}
+
+nav .Logo {
+  min-width: 250px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  display: flex;
+  padding: 20px 25px;
+}
+
+nav a:hover {
+  background-color: rgb(71, 71, 71);
+}
+
+
+nav .Desktop {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  pad: 0 20px;
+}
+
+nav .Desktop .Primary{
+  display: flex;
+  justify-content: space-between;
+  min-width: 100px;
+}
+/* Termina barra de navegación*/
+
+/* Empieza footer */
+footer {
+  background-color: black;
+  color: white;
+  text-align: center;
+  position: static;
+  bottom: 0;
+  padding: 10px;
+}
+/*  Termina footer */
+
+/* Empiezan productos */
+.Productos {
+  /* width: 95vw; */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 5%;
+  align-items: center;
+  text-align: center;
+  margin-top: 15px;
+}
+
+.Productos a {
+  text-decoration: none;
+  color: white;
+}
+
+.Productos button {
+  background-color: black;
+  margin: 10px;
+  border-radius: 5px;
+  font-size: large;
+}
+
+.Productos .Producto {
+  background-color: aliceblue;
+  border: 2px solid grey;
+  border-radius: 5%;
+  max-width: 30%;
+  min-width: 220px;
+}
+
+.Productos .Producto img {
+  width: 80%;
+  border-radius: 10%;
+}
+/* Terminan productos */
+
+
+/* Empieza responsive */
+@media screen and (max-width: 1300px) {
+
+  .Productos {
+    margin-top: 50px;
+  }
+
+  @media screen and (max-width: 853px){
+
+    nav .Logo {
+      min-width: 100px;
+    }
+  
+    .Productos {
+      margin-top: 50px;
+    }
+  
+    @media screen and (max-width: 364px) {
+      
+      nav .Desktop {
+        display: none;
+      }
+  
+      nav .Mobile {
+        display: block;
+        top: 0;
+      }
+  
+      .Productos {
+        margin-top: 180px;
+      }
+      
+    }
+  }
+}
+/* Termina responsive */

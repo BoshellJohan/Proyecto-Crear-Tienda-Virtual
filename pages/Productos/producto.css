@@ -1,0 +1,340 @@
+/*Estilo del cuerpo de la página */
+body {
+  background-color: rgb(250, 237, 220);
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  margin: 0;
+}
+
+/* Empieza barra de navegación*/
+nav {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: large;
+  background-color: rgb(48, 48, 48);
+  color: white;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 1;
+}
+
+nav .Logo {
+  min-width: 250px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  display: flex;
+  padding: 20px 25px;
+}
+
+nav a:hover {
+  background-color: rgb(71, 71, 71);
+}
+
+
+nav .Desktop {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  pad: 0 20px;
+}
+
+/* Termina barra de navegación*/
+
+/*Esconder la versión móvil hasta nuevo aviso */
+.Mobile {
+  display: none;
+}
+
+/*Inicio del estilo en Escritorio */
+.Margin {
+  box-sizing: border-box;
+  border: solid 2px black;
+  width: 80vw;
+  height: auto;
+  display: flex;
+  display: flex;
+  align-items: center;
+  position: relative;
+  margin: 100px;
+}
+
+
+.Container .ContainerProduct {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.Container .ContainerProduct .Margin .Info {
+  position: absolute;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 40%;
+}
+
+
+h3 {
+  font-size: 1.8vw;
+}
+
+
+.Container .ContainerProduct .Margin .Foto {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 60%;
+}
+
+.Container .ContainerProduct .Margin .Foto img {
+  position: relative;
+  min-width: 300px;
+  min-height: 300px;
+}
+
+.Container .ContainerProduct .Margin .Texto {
+  display: flex;
+  text-align: center;
+  justify-content: start !important;
+  width: 40%;
+  margin: 10px;
+  flex-direction: column;
+}
+
+/*Nombre del Producto */
+.Container .ContainerProduct .Margin .Texto .Info .Nombre {
+  text-align: center;
+  font-weight: bold;
+  font-size: 2.5vw;
+  color: black;
+
+}
+
+/*Precio del Producto*/
+.Container .ContainerProduct .Margin .Texto .Info .Precio {
+  text-align: left;
+  font-size: 2vw;
+}
+
+/*Valor específico del producto*/
+.Container .ContainerProduct .Margin .Texto .Info .Precio a {
+  text-align: center;
+  justify-content: center;
+  font-size: 2.5vw;
+}
+
+/*Detalles del producto*/
+.Container .ContainerProduct .Margin .Texto .Description {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  bottom: 0;
+  padding: 0 10px 10px 10px;
+}
+
+.Container .ContainerProduct .Margin .Texto .Details {
+  font-size: 1.5vw;
+  height: 100%;
+  font-weight: 20px;
+}
+
+/*Botón para enviar la compra*/
+.Container .ContainerProduct .Margin .Texto .Description button {
+
+  border: solid 1px black;
+  width: 100%;
+  height: 50px;
+  background-color: orange;
+  cursor: pointer;
+  font-size: 1.6vw;
+  align-items: flex;
+  justify-content: flex-end;
+  margin-top: 10px;
+  max-height: 50px;
+  max-width: 100%;
+}
+
+
+/*Se redimensiona la página cuando comienza a fallar debido al cambio de navegador o pantalla */
+@media screen and (max-width: 1050px) {
+  /* .Directory {
+      max-width: 403.5px;
+   }  */
+
+  /*Nombre del producto */
+  .Container .ContainerProduct .Margin .Texto .Info .Nombre {
+    text-align: center;
+    font-weight: bold;
+    font-size: 2vw;
+    color: black;
+  }
+
+  /*Palabra "precio" */
+  .Container .ContainerProduct .Margin .Texto .Info .Precio {
+    text-align: left;
+    font-size: 2vw;
+  }
+
+  /*Valor del producto */
+  .Container .ContainerProduct .Margin .Texto .Info .Precio a {
+    text-align: center;
+    justify-content: center;
+    font-size: 2vw;
+  }
+
+  /*Título "Detalles"*/
+  h3 {
+    font-size: 1.4vw;
+  }
+
+  /*Propiedades de los detalles del producto */
+  .Container .ContainerProduct .Margin .Texto .Details {
+    font-size: 1.5vw;
+    height: 100%;
+    font-weight: 20px;
+  }
+
+  /*Botón para enviar la compra */
+  .Container .ContainerProduct .Margin .Texto .Description button {
+    width: 100%;
+    font-size: 1vw;
+    margin-top: 10px;
+    max-height: 30px;
+    max-width: 100%;
+  }
+}
+
+/*Redimensión más pequeña*/
+@media screen and (max-width: 780px) {
+
+  .Desktop {
+    display: none;
+  }
+
+
+  /*Se activa la redimensión para móvil*/
+  .Mobile {
+    display: flex;
+    margin-top: 50px;
+  }
+
+  /*Nuevo Margén*/
+  .Margin {
+    box-sizing: border-box;
+    width: 300px;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    margin: 8vw 25vw;
+  }
+
+
+  /*Propiedades del espacio donde va la foto*/
+  .Container .ContainerProduct .Margin .Foto {
+    display: flex;
+    flex-direction: column;
+    height: 300px;
+    width: 100%;
+  }
+
+
+  /*Imagen del producto*/
+  .Container .ContainerProduct .Margin .Foto img {
+    position: relative;
+    min-width: 100%;
+  }
+
+  /*Propiedades del espacio donde va el nombre y precio del producto*/
+  .Container .ContainerProduct .Margin .Info {
+    position: relative;
+    top: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: left;
+    justify-content: center;
+    width: 100%;
+    height: 15%;
+    gap: 20px;
+  }
+
+
+  /*Nuevas propiedades para el apartado de detalles*/
+  .Container .ContainerProduct .Margin .Texto {
+    position: relative;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    width: 100%;
+    margin: 10px;
+    height: 35%;
+    flex-direction: column;
+    padding-top: 15px;
+  }
+
+
+  /*Propiedades de los detalles del producto*/
+  .Container .ContainerProduct .Margin .Texto .Details {
+    font-size: 11px;
+    height: 100%;
+    font-weight: 20px;
+  }
+
+  /*Título "Detalles"*/
+  h3 {
+    font-size: 11px;
+  }
+
+  /*Botón para enviar entrega*/
+  .Container .ContainerProduct .Margin .Texto .Description button {
+
+    width: 100%;
+    height: 50px;
+    font-size: 10px;
+    margin-top: 10px;
+    max-height: 30px;
+    max-width: 100%;
+    bottom: 0;
+    position: relative;
+  }
+
+  /*Definir un tamaño fijo para el nombre del producto para los demás dispositivos*/
+  .Container .ContainerProduct .Margin .Texto .Info .Nombre {
+    text-align: center;
+    font-weight: bold;
+    font-size: 15px;
+    color: black;
+  }
+
+  /*Propiedades fijas para el valor del producto*/
+  .Container .ContainerProduct .Margin .Texto .Info .Precio a {
+    text-align: center;
+    justify-content: center;
+    font-size: 15px;
+
+  }
+
+  /*Propiedades fijas para la palabra "Precio"*/
+  .Container .ContainerProduct .Margin .Texto .Info .Precio {
+    text-align: left;
+    font-size: 8px;
+  }
+
+}
+
+/*Dimensiones por debajo de 500px de ancho*/
+@media screen and (max-width: 500px) {
+  .Margin {
+    box-sizing: border-box;
+    width: 300px;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    margin: 8vw 1vw;
+  }
+}
